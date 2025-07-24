@@ -1,0 +1,137 @@
+import { companyInfo } from '../../data/company';
+import { Link } from 'react-router-dom';
+
+const SpecialCommercialTransactions = () => {
+  return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* Page Header */}
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-secondary-900 mb-6">特定商取引法に基づく表記</h1>
+        <p className="text-lg text-secondary-600">
+          特定商取引に関する法律に基づき、以下の通り表示いたします。
+        </p>
+      </div>
+
+      <div className="card space-y-10">
+        {/* 販売業者 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            販売業者
+          </h2>
+          <p className="text-secondary-700">{companyInfo.name}</p>
+        </section>
+
+        {/* 運営統括責任者 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            運営統括責任者
+          </h2>
+          <p className="text-secondary-700">{companyInfo.representative}</p>
+        </section>
+
+        {/* 連絡先 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            連絡先
+          </h2>
+          <div className="space-y-2">
+            <p className="text-secondary-700">
+              <span className="font-medium">メールアドレス:</span> {companyInfo.email}
+            </p>
+            <p className="text-secondary-700">
+              <span className="font-medium">対応時間:</span> {companyInfo.businessHours}
+            </p>
+          </div>
+        </section>
+
+        {/* 商品の販売価格 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            商品の販売価格
+          </h2>
+          <div className="text-secondary-700 space-y-2">
+            <p>各商品ページに表示された価格（税込）</p>
+            <p>価格は商品によって異なります。詳細は各商品ページをご確認ください。</p>
+          </div>
+        </section>
+
+        {/* 商品代金以外の必要料金 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            商品代金以外の必要料金
+          </h2>
+          <div className="text-secondary-700 space-y-2">
+            <p><span className="font-medium">追加料金:</span> なし</p>
+            <p><span className="font-medium">手数料:</span> お支払い方法により異なります</p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>クレジットカード決済: 無料</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* お支払い方法 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            お支払い方法
+          </h2>
+          <div className="text-secondary-700">
+            <ul className="list-disc list-inside space-y-1">
+              <li>クレジットカード（VISA、MasterCard、JCB、American Express）</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* お支払い時期 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            お支払い時期
+          </h2>
+          <div className="text-secondary-700">
+            <p><span className="font-medium">クレジットカード:</span> ご注文確定時</p>
+          </div>
+        </section>
+
+        {/* 商品の引き渡し時期 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            商品の引き渡し時期
+          </h2>
+          <div className="text-secondary-700 space-y-2">
+            <p>ご入金確認後、即座にダウンロードリンクをメールでお送りいたします。</p>
+            <p>ダウンロード期限は購入から30日間です。</p>
+          </div>
+        </section>
+
+        {/* 返品・交換について */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            返品・交換について
+          </h2>
+          <div className="text-secondary-700 space-y-2">
+            <p><span className="font-medium">返品期限:</span> 商品購入後30日以内</p>
+            <p><span className="font-medium">返品条件:</span> デジタルコンテンツの性質上、原則として返品はお受けできませんが、商品に不具合がある場合や説明と著しく異なる場合は対応いたします。</p>
+            <p>詳細は<Link to="/refund-policy" className="text-primary-600 hover:underline">返金ポリシー</Link>をご確認ください。</p>
+          </div>
+        </section>
+
+        {/* 不良品について */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            不良品について
+          </h2>
+          <div className="text-secondary-700 space-y-2">
+            <p>商品の不具合・ダウンロードに関する問題があった場合は、購入後30日以内にメールでご連絡ください。</p>
+            <p>確認後、修正版の提供または返金いたします。</p>
+          </div>
+        </section>
+      </div>
+
+      {/* 最終更新日 */}
+      <div className="mt-12 text-center text-sm text-secondary-500">
+        <p>最終更新日: 2024年7月24日</p>
+      </div>
+    </div>
+  );
+};
+
+export default SpecialCommercialTransactions; 
