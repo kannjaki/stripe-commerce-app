@@ -29,23 +29,21 @@ const SpecialCommercialTransactions = () => {
           <p className="text-secondary-700">{companyInfo.representative}</p>
         </section>
 
-        {/* 所在地 */}
+        {/* 所在地・連絡先 */}
         <section>
           <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
-            所在地
+            所在地・連絡先
           </h2>
-          <p className="text-secondary-700">{companyInfo.address}</p>
-        </section>
-
-        {/* 連絡先 */}
-        <section>
-          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
-            連絡先
-          </h2>
-          <div className="space-y-2">
-            <p className="text-secondary-700">
-              <span className="font-medium">電話番号:</span> {companyInfo.phone}
-            </p>
+          <div className="space-y-3">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <p className="text-secondary-700 font-medium mb-2">
+                <span className="text-blue-800">📍 所在地・電話番号について</span>
+              </p>
+              <p className="text-secondary-700 text-sm leading-relaxed">
+                所在地及び電話番号につきましては、ご購入をご検討のお客様からのご請求により、
+                遅滞なくメールにて開示いたします。下記メールアドレスまでお気軽にお問い合わせください。
+              </p>
+            </div>
             <p className="text-secondary-700">
               <span className="font-medium">メールアドレス:</span> {companyInfo.email}
             </p>
@@ -144,7 +142,7 @@ const SpecialCommercialTransactions = () => {
             不良品について
           </h2>
           <div className="text-secondary-700 space-y-2">
-            <p>商品の不具合・ダウンロードに関する問題があった場合は、購入後30日以内に上記連絡先までご連絡ください。</p>
+            <p>商品の不具合・ダウンロードに関する問題があった場合は、購入後30日以内に上記メールアドレスまでご連絡ください。</p>
             <p>確認後、速やかに修正版の提供または返金対応いたします。</p>
           </div>
         </section>
@@ -157,6 +155,24 @@ const SpecialCommercialTransactions = () => {
           <div className="text-secondary-700">
             <p>お客様の個人情報は、商品の提供および必要なご連絡のためのみに使用し、適切に管理いたします。</p>
             <p>詳細は<Link to="/privacy-policy" className="text-primary-600 hover:underline">プライバシーポリシー</Link>をご確認ください。</p>
+          </div>
+        </section>
+
+        {/* 重要事項の開示について */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            重要事項の開示について
+          </h2>
+          <div className="text-secondary-700 space-y-2">
+            <p>特定商取引法第11条に基づき、ご購入をご検討のお客様からのご請求により、以下の事項を遅滞なく書面または電子メールにて開示いたします：</p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>事業者の住所</li>
+              <li>事業者の電話番号</li>
+              <li>その他法定表示事項</li>
+            </ul>
+            <p className="text-sm text-secondary-600 mt-3">
+              開示をご希望の場合は、上記メールアドレスまで「特定商取引法に基づく表記の開示請求」の件名でご連絡ください。
+            </p>
           </div>
         </section>
       </div>
