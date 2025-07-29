@@ -29,12 +29,23 @@ const SpecialCommercialTransactions = () => {
           <p className="text-secondary-700">{companyInfo.representative}</p>
         </section>
 
+        {/* 所在地 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            所在地
+          </h2>
+          <p className="text-secondary-700">{companyInfo.address}</p>
+        </section>
+
         {/* 連絡先 */}
         <section>
           <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
             連絡先
           </h2>
           <div className="space-y-2">
+            <p className="text-secondary-700">
+              <span className="font-medium">電話番号:</span> {companyInfo.phone}
+            </p>
             <p className="text-secondary-700">
               <span className="font-medium">メールアドレス:</span> {companyInfo.email}
             </p>
@@ -69,6 +80,16 @@ const SpecialCommercialTransactions = () => {
           </div>
         </section>
 
+        {/* 申込の有効期限 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            申込の有効期限
+          </h2>
+          <div className="text-secondary-700">
+            <p>ご注文手続き完了まで有効です。カート内商品の保持期限はございません。</p>
+          </div>
+        </section>
+
         {/* お支払い方法 */}
         <section>
           <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
@@ -76,7 +97,9 @@ const SpecialCommercialTransactions = () => {
           </h2>
           <div className="text-secondary-700">
             <ul className="list-disc list-inside space-y-1">
-              <li>クレジットカード（VISA、MasterCard、JCB、American Express）</li>
+              <li>クレジットカード（VISA、MasterCard、JCB、American Express、Diners Club）</li>
+              <li>デビットカード</li>
+              <li>プリペイドカード（一部制限あり）</li>
             </ul>
           </div>
         </section>
@@ -87,7 +110,7 @@ const SpecialCommercialTransactions = () => {
             お支払い時期
           </h2>
           <div className="text-secondary-700">
-            <p><span className="font-medium">クレジットカード:</span> ご注文確定時</p>
+            <p><span className="font-medium">クレジットカード:</span> ご注文確定時に決済処理が行われます</p>
           </div>
         </section>
 
@@ -97,8 +120,8 @@ const SpecialCommercialTransactions = () => {
             商品の引き渡し時期
           </h2>
           <div className="text-secondary-700 space-y-2">
-            <p>ご入金確認後、即座にダウンロードリンクをメールでお送りいたします。</p>
-            <p>ダウンロード期限は購入から30日間です。</p>
+            <p>ご決済完了後、即座にダウンロードリンクをご登録のメールアドレスにお送りいたします。</p>
+            <p>ダウンロード期限は購入から30日間です。期限内に必ずダウンロードをお済ませください。</p>
           </div>
         </section>
 
@@ -110,6 +133,7 @@ const SpecialCommercialTransactions = () => {
           <div className="text-secondary-700 space-y-2">
             <p><span className="font-medium">返品期限:</span> 商品購入後30日以内</p>
             <p><span className="font-medium">返品条件:</span> デジタルコンテンツの性質上、原則として返品はお受けできませんが、商品に不具合がある場合や説明と著しく異なる場合は対応いたします。</p>
+            <p><span className="font-medium">返品手数料:</span> 当社都合による返品の場合は無料、お客様都合による返品はお受けしておりません</p>
             <p>詳細は<Link to="/refund-policy" className="text-primary-600 hover:underline">返金ポリシー</Link>をご確認ください。</p>
           </div>
         </section>
@@ -120,15 +144,26 @@ const SpecialCommercialTransactions = () => {
             不良品について
           </h2>
           <div className="text-secondary-700 space-y-2">
-            <p>商品の不具合・ダウンロードに関する問題があった場合は、購入後30日以内にメールでご連絡ください。</p>
-            <p>確認後、修正版の提供または返金いたします。</p>
+            <p>商品の不具合・ダウンロードに関する問題があった場合は、購入後30日以内に上記連絡先までご連絡ください。</p>
+            <p>確認後、速やかに修正版の提供または返金対応いたします。</p>
+          </div>
+        </section>
+
+        {/* 個人情報の取り扱い */}
+        <section>
+          <h2 className="text-2xl font-semibold text-secondary-900 mb-4 border-b border-secondary-200 pb-2">
+            個人情報の取り扱い
+          </h2>
+          <div className="text-secondary-700">
+            <p>お客様の個人情報は、商品の提供および必要なご連絡のためのみに使用し、適切に管理いたします。</p>
+            <p>詳細は<Link to="/privacy-policy" className="text-primary-600 hover:underline">プライバシーポリシー</Link>をご確認ください。</p>
           </div>
         </section>
       </div>
 
       {/* 最終更新日 */}
       <div className="mt-12 text-center text-sm text-secondary-500">
-        <p>最終更新日: 2024年7月24日</p>
+        <p>最終更新日: 2024年12月19日</p>
       </div>
     </div>
   );
