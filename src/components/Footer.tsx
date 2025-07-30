@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-white text-lg font-semibold mb-4">CommerceHub</h3>
+            <h3 className="text-white text-lg font-semibold mb-4">CandyTech</h3>
             <p className="text-sm leading-relaxed mb-4">
               高品質な商品を安心してお買い求めいただける総合ECプラットフォーム
             </p>
